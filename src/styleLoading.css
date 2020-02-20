@@ -1,0 +1,94 @@
+
+/* Code removed from codepen   */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #ececec;
+}
+/*Container for loading animation bar*/
+#load-screen{
+	display: flex;
+	flex-flow: wrap column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.75);
+}
+#load-bar{
+	background-color: #ececec;
+	border: 1em solid #ffffff;
+	height: 3.25em;
+	width: 50%;
+	box-shadow: -0.25em 0.3em 0 #333333;
+}
+#load-percentage{
+	color: #ffffff;
+	font-size: 2em;
+}
+/*Progress bar to be animated*/
+#progress-bar{
+	height: 100%;
+	width: 100%;
+	background: #dddddd;
+	background-image: linear-gradient(45deg,
+		 #dddddd -5%, #dddddd -2.5%,
+		 #cccccc -2.5%, #cccccc 0%,
+		 #dddddd 0%, #dddddd 2.5%,
+		 #cccccc 2.5%, #cccccc 5%,
+		 #dddddd 5%, #dddddd 7.5%,
+		 #cccccc 7.5%, #cccccc 10%,
+		 #dddddd 10%, #dddddd 12.5%,
+		 #cccccc 12.5%, #cccccc 15%,
+		 #dddddd 15%, #dddddd 17.5%,
+		 #cccccc 17.5%, #cccccc 20%,
+		 #dddddd 20%, #dddddd 22.5%,
+		 #cccccc 22.5%, #cccccc 25%,
+		 #dddddd 25%, #dddddd 27.5%,
+		 #cccccc 27.5%, #cccccc 30%,
+		 #dddddd 30%, #dddddd 32.5%,
+		 #cccccc 32.5%, #cccccc 35%,
+		 #dddddd 35%, #dddddd 37.5%,
+		 #cccccc 37.5%, #cccccc 40%,
+		 #dddddd 40%, #dddddd 42.5%,
+		 #cccccc 42.5%, #cccccc 45%,
+		 #dddddd 45%, #dddddd 47.5%,
+		 #cccccc 47.5%, #cccccc 50%,
+		 #dddddd 50%, #dddddd 52.5%,
+		 #cccccc 52.5%, #cccccc 55%,
+		 #dddddd 55%, #dddddd 57.5%,
+		 #cccccc 57.5%, #cccccc 60%,
+		 #dddddd 60%, #dddddd 62.5%,
+		 #cccccc 62.5%, #cccccc 65%,
+		 #dddddd 65%, #dddddd 67.5%,
+		 #cccccc 67.5%, #cccccc 70%,
+		 #dddddd 70%, #dddddd 72.5%,
+		 #cccccc 72.5%, #cccccc 75%,
+		 #dddddd 75%, #dddddd 77.5%,
+		 #cccccc 77.5%, #cccccc 80%,
+		 #dddddd 80%, #dddddd 82.5%,
+		 #cccccc 82.5%, #cccccc 85%,
+		 #dddddd 85%, #dddddd 87.5%,
+		 #cccccc 87.5%, #cccccc 90%,
+		 #dddddd 90%, #dddddd 92.5%,
+		 #cccccc 92.5%, #cccccc 95%,
+		 #dddddd 95%, #dddddd 97.5%,
+		 #cccccc 97.5%, #cccccc 100%,
+		 #dddddd 100%, #dddddd 102.5%,
+		 #cccccc 102.5%, #cccccc 105%);
+	background-size: 100vw 100%;
+	-moz-animation: prettyLoader 1.5s linear infinite;
+	-o-animation: prettyLoader 1.5s linear infinite;
+	-webkit-animation: prettyLoader linear 1.5s ease infinite;
+	animation: prettyLoader 1.5s linear infinite;
+	box-shadow: 0.05em 0 0.15em #cccccc;
+}
+/*Animations*/
+@keyframes prettyLoader{
+	0% {background-position: -5vw 0;}
+	100% {background-position: 0vw 0;}
+}

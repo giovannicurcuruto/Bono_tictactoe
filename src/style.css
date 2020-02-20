@@ -26,3 +26,45 @@
     justify-content: center;
     align-items: center;
 }
+
+.bono_games_title{
+    font-weight: 900;
+    font-size: 8rem;
+    text-align: center;
+}
+
+.bono_games_title span{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.bono_games_footer{
+    width: 100%;
+    font-size: 1.85rem;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    background-color: #34495e;
+
+}
+
+.bono_game_self{
+    max-width:100%; 
+    height:auto; 
+}
+
+.bono_game_buttons-font{
+    color: white;
+}
+
+.bono_game_buttons-font:hover{
+    color:white;
+}
+
+.bono_warning{
+    font-size: 50px;
+
+}
