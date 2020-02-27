@@ -51,7 +51,7 @@ const bono_game = {
     },
 
     game_is_over: function () {
-        this.gameover = true;
+        //this.gameover = true;
         console.log('Game over');
         this.pontua_jogo();
         
@@ -63,15 +63,6 @@ const bono_game = {
         this.gameover = false;
 
     },
-
-
-
-    jogo_continuo: function () {
-        
-        
-
-    },
-
 
     reset: function (){
         document.getElementById(btn-reset).innerHTML = start();
@@ -91,6 +82,9 @@ const bono_game = {
         }
         if(!this.tabuleiro.includes('')){
             alert('Velha, favor tentar novamente.');
+            this.tabuleiro.fill('');
+            this.escrever_tela();
+            console.log('oba');
 
         }
 
@@ -114,6 +108,12 @@ const bono_game = {
             //console.log('Others: ' +this.win_x );
             //value2.innerHTML = this.win_x;
         }
+        
+      
+        this.tabuleiro.fill('');
+        this.escrever_tela();
+        console.log('oba');
+
     },
 
 
