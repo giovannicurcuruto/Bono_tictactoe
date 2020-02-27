@@ -7,7 +7,8 @@ const bono_game = {
             this.indice_turno = (this.indice_turno === 0 ? 1 : 0);
         }
     },
-
+    win_x: 0,
+    win_0: 0,
     elemento_container: null,
     gameover: false,
     seqVencedora: [
@@ -51,7 +52,9 @@ const bono_game = {
 
     game_is_over: function () {
         this.gameover = true;
-        console.log('Game over bitch - You Win');
+        console.log('Game over');
+        this.pontua_jogo();
+        
     },
 
     start: function () {
@@ -60,6 +63,20 @@ const bono_game = {
         this.gameover = false;
 
     },
+
+
+
+    jogo_continuo: function () {
+        
+        
+
+    },
+
+
+    reset: function (){
+        document.getElementById(btn-reset).innerHTML = start();
+    },
+
 
     verifica_seqVencedora: function (simbolo) {
         for (i in this.seqVencedora) {
@@ -73,10 +90,33 @@ const bono_game = {
             }
         }
         if(!this.tabuleiro.includes('')){
-            console.log('Você perdeu');
+            alert('Velha, favor tentar novamente.');
+
         }
 
     },
+
+    pontua_jogo: function (x,y){
+        let value1;
+        win_0 = x;
+        win_x = y;
+        let value2;
+        if(this.simbolos.indice_turno === 0){
+            win_0 = win_0 + 1;
+            //console.log('BonoGuy: ' + this.win_0);
+            document.getElementById("interator-x").innerHTML = win_0;
+            //value1.innerHTML = this.win_0;
+            return win_0,win_x;
+        } else{
+            win_x = win_x + 1;
+            document.getElementById("interator-y").innerHTML = win_x;
+            return win_0,win_x;
+            //console.log('Others: ' +this.win_x );
+            //value2.innerHTML = this.win_x;
+        }
+    },
+
+
 
     escrever_tela: function () {
         let conteudo = '';
