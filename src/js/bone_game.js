@@ -96,21 +96,21 @@ const bono_game = {
 
     },
 
-    pontua_jogo: function (x,y){
-        let value1;
-        win_0 = x;
-        win_x = y;
-        let value2;
+    pontua_jogo: function (){
+        //let value1;
+        //win_0 = x;
+        //win_x = y;
+        //let value2;
         if(this.simbolos.indice_turno === 0){
-            win_0 = win_0 + 1;
+            this.win_0 = this.win_0 + 1;
             //console.log('BonoGuy: ' + this.win_0);
-            document.getElementById("interator-x").innerHTML = win_0;
+            document.getElementById("interator-x").innerHTML = this.win_0;
             //value1.innerHTML = this.win_0;
-            return win_0,win_x;
+            //return thwin_0,win_x;
         } else{
-            win_x = win_x + 1;
-            document.getElementById("interator-y").innerHTML = win_x;
-            return win_0,win_x;
+            this.win_x = this.win_x + 1;
+            document.getElementById("interator-y").innerHTML = this.win_x;
+            //return win_0,win_x;
             //console.log('Others: ' +this.win_x );
             //value2.innerHTML = this.win_x;
         }
